@@ -10,6 +10,8 @@
 		75BBF9401B217D08007AA1B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75BBF93F1B217D08007AA1B1 /* Foundation.framework */; };
 		75BBF9431B217D08007AA1B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BBF9421B217D08007AA1B1 /* main.m */; };
 		75BBF9471B217D08007AA1B1 /* sampleDelegate.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75BBF9461B217D08007AA1B1 /* sampleDelegate.1 */; };
+		75BBF94F1B22D551007AA1B1 /* one.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BBF94E1B22D551007AA1B1 /* one.m */; };
+		75BBF9521B22D55E007AA1B1 /* two.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BBF9511B22D55E007AA1B1 /* two.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +33,10 @@
 		75BBF9421B217D08007AA1B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75BBF9451B217D08007AA1B1 /* sampleDelegate-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sampleDelegate-Prefix.pch"; sourceTree = "<group>"; };
 		75BBF9461B217D08007AA1B1 /* sampleDelegate.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = sampleDelegate.1; sourceTree = "<group>"; };
+		75BBF94D1B22D551007AA1B1 /* one.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = one.h; sourceTree = "<group>"; };
+		75BBF94E1B22D551007AA1B1 /* one.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = one.m; sourceTree = "<group>"; };
+		75BBF9501B22D55E007AA1B1 /* two.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = two.h; sourceTree = "<group>"; };
+		75BBF9511B22D55E007AA1B1 /* two.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = two.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,10 @@
 				75BBF9421B217D08007AA1B1 /* main.m */,
 				75BBF9461B217D08007AA1B1 /* sampleDelegate.1 */,
 				75BBF9441B217D08007AA1B1 /* Supporting Files */,
+				75BBF94D1B22D551007AA1B1 /* one.h */,
+				75BBF94E1B22D551007AA1B1 /* one.m */,
+				75BBF9501B22D55E007AA1B1 /* two.h */,
+				75BBF9511B22D55E007AA1B1 /* two.m */,
 			);
 			path = sampleDelegate;
 			sourceTree = "<group>";
@@ -139,6 +149,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75BBF9521B22D55E007AA1B1 /* two.m in Sources */,
+				75BBF94F1B22D551007AA1B1 /* one.m in Sources */,
 				75BBF9431B217D08007AA1B1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,6 +231,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sampleDelegate/sampleDelegate-Prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -228,6 +241,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sampleDelegate/sampleDelegate-Prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -251,6 +265,7 @@
 				75BBF94C1B217D08007AA1B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

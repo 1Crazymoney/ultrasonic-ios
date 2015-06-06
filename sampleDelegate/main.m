@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "two.h"
 int main(int argc, const char * argv[])
 {
 
@@ -15,6 +15,8 @@ int main(int argc, const char * argv[])
         
         // insert code here...
         NSLog(@"Hello, World!");
+        two *obj = [[two alloc]init];
+        [obj initMethod];
         
     }
     return 0;
