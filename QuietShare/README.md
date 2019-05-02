@@ -9,4 +9,5 @@ How to Use:
 	- text box to key in the text which we want to send
 	- 'Send' button to send the above text 
 	- 'Receive' button to make the app in the listening mode for the text
+	- 'Cancel' button to cancel sending or receiving mode
 	- Text view to display the recieved text
