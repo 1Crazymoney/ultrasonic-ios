@@ -39,13 +39,14 @@ void (^recv_callback)(NSData*) = ^(NSData *frame){
     
     QMReceiverConfig *rxConf = [[QMReceiverConfig alloc] initWithKey:_selectedProfile];
     rx = [[QMFrameReceiver alloc] initWithConfig:rxConf];
-    [rx setBlocking:30 withNano:0];
+    [rx setBlocking:10 withNano:0];
     [rx setReceiveCallback:recv_callback];
     
     
     if (rx != nil) {
-        printf("rx value is  %s\n", [[rx receive] bytes]);
-        self.receivText.text = [NSString stringWithUTF8String:[[rx receive] bytes]];
+        NSString *temp = [NSString stringWithFormat:@"%s", [[rx receive] bytes]];
+        [rx close];
+        self.receivText.text = temp;
         [rx close];
     }
 }
@@ -66,13 +67,7 @@ void (^recv_callback)(NSData*) = ^(NSData *frame){
     
     QMFrameTransmitter *tx = [[QMFrameTransmitter alloc] initWithConfig:txConf];
     
-    NSDictionary* task1 = [NSDictionary
-                           dictionaryWithObjectsAndKeys:_txtToSend.text, @"payeeCashTag", _txtToSend.text, @"payeeAccount", nil];
-    
-    NSData* encodedData = [NSJSONSerialization dataWithJSONObject:task1 options:NSJSONWritingPrettyPrinted error:nil];
-    NSString* jsonString = [[NSString alloc] initWithData:encodedData encoding:NSUTF8StringEncoding];
-    
-    NSData *frame = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *frame = [_txtToSend.text dataUsingEncoding:NSUTF8StringEncoding];
     [tx send:frame];
     [tx close];
 }
@@ -86,7 +81,6 @@ void (^recv_callback)(NSData*) = ^(NSData *frame){
     self.sendTimer = nil;
     
     self.sendBtn.enabled = YES;
-    //    self.cancelBtn.enabled = NO;
     
     self.receivText.text = @"";
     [self.rcvTimer invalidate];
@@ -112,14 +106,6 @@ void (^recv_callback)(NSData*) = ^(NSData *frame){
     }
 }
 
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
-    
-    if ([keyPath isEqualToString:@"result"]) {
-        
-        NSLog(@"%@", change);
-    }
-}
-
 
 void (^perm_grant_callback)(BOOL) = ^(BOOL granted){
     NSLog(@"granted is %d", granted);
@@ -132,18 +118,12 @@ void (^perm_grant_callback)(BOOL) = ^(BOOL granted){
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return 4;
+    return 1;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     switch(row) {
         case 0:
-            _selectedProfile =@"audible";
-            break;
-        case 1:
-            _selectedProfile =@"ultrasonic";
-            break;
-        case 2:
             _selectedProfile =@"ultrasonic-experimental";
             break;
     }
