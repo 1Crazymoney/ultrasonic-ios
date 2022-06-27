@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,12 +17,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PlH-TZ-TQk">
-                                <rect key="frame" x="10" y="20" width="355" height="216"/>
+                                <rect key="frame" x="24" y="96" width="327" height="115"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="YNg-8e-DS7"/>
+                                </constraints>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mn2-FC-Ace">
-                                <rect key="frame" x="137" y="467" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.81421854500000002" green="0.96397344559999998" blue="0.27023402320000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mn2-FC-Ace">
+                                <rect key="frame" x="137.66666666666666" y="291" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.8078432083" green="0.68627452850000004" blue="0.34117650989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="K4G-nk-hsB"/>
+                                    <constraint firstAttribute="width" constant="100" id="cDl-Ao-7iv"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Send"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
@@ -36,23 +43,12 @@
                                     <action selector="sendText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="alO-qN-xcE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wqy-AI-SnW">
-                                <rect key="frame" x="137" y="592" width="100" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.81421854500000002" green="0.96397344559999998" blue="0.27023402320000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="cancel"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="cancelAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uzq-b1-Lfc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="080-ZJ-kBJ">
-                                <rect key="frame" x="137" y="337" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.81421854500000002" green="0.96397344559999998" blue="0.27023402320000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Receive"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="080-ZJ-kBJ">
+                                <rect key="frame" x="137.66666666666666" y="403" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.8078432083" green="0.68627452850000004" blue="0.34117650989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Receive">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -63,28 +59,70 @@
                                     <action selector="rcvText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QVv-HP-eEA"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rSk-eZ-fwm">
-                                <rect key="frame" x="5" y="650" width="360" height="142"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rSk-eZ-fwm">
+                                <rect key="frame" x="24" y="672" width="327" height="120"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="bJZ-mg-Z4Z"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="text to send" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZBg-Pr-r59">
-                                <rect key="frame" x="20" y="228" width="335" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="text to send" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZBg-Pr-r59">
+                                <rect key="frame" x="24" y="243" width="327" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="eYT-wX-QRw"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="knoxgoldenlogo" translatesAutoresizingMaskIntoConstraints="NO" id="abH-gN-Ue2">
+                                <rect key="frame" x="24" y="40" width="327" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="sEZ-Ji-lfn"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wqy-AI-SnW">
+                                <rect key="frame" x="137.66666666666666" y="535" width="100" height="40"/>
+                                <color key="backgroundColor" red="0.8078432083" green="0.68627452850000004" blue="0.34117650989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="GN8-qk-iFi"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="cancel"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cancelAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uzq-b1-Lfc"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.54425881379999996" green="0.87493928109999997" blue="0.84909006389999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PlH-TZ-TQk" secondAttribute="trailing" constant="10" id="Ap0-3q-S6p"/>
-                            <constraint firstItem="PlH-TZ-TQk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="atJ-9Q-gi9"/>
-                            <constraint firstItem="PlH-TZ-TQk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="yZ2-V1-Jm0"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="080-ZJ-kBJ" firstAttribute="top" secondItem="mn2-FC-Ace" secondAttribute="bottom" constant="12" id="0BO-bM-tXh"/>
+                            <constraint firstItem="PlH-TZ-TQk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="72R-lm-26r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZBg-Pr-r59" secondAttribute="trailing" constant="24" id="CWl-lK-I1Y"/>
+                            <constraint firstItem="Wqy-AI-SnW" firstAttribute="width" secondItem="080-ZJ-kBJ" secondAttribute="width" id="E1s-WR-roW"/>
+                            <constraint firstItem="rSk-eZ-fwm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Eav-4Y-3UG"/>
+                            <constraint firstItem="mn2-FC-Ace" firstAttribute="top" secondItem="ZBg-Pr-r59" secondAttribute="bottom" constant="16" id="Fad-cP-dyp"/>
+                            <constraint firstItem="abH-gN-Ue2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="40" id="Itx-iz-4vz"/>
+                            <constraint firstAttribute="bottom" secondItem="rSk-eZ-fwm" secondAttribute="bottom" constant="20" symbolic="YES" id="L3h-cj-RoK"/>
+                            <constraint firstItem="Wqy-AI-SnW" firstAttribute="top" secondItem="080-ZJ-kBJ" secondAttribute="bottom" constant="32" id="QOV-wS-fdy"/>
+                            <constraint firstItem="PlH-TZ-TQk" firstAttribute="top" secondItem="abH-gN-Ue2" secondAttribute="bottom" constant="16" id="Qa2-qZ-pl8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rSk-eZ-fwm" secondAttribute="trailing" constant="24" id="XG0-jm-8fZ"/>
+                            <constraint firstItem="ZBg-Pr-r59" firstAttribute="top" secondItem="PlH-TZ-TQk" secondAttribute="bottom" constant="32" id="c3t-bD-foB"/>
+                            <constraint firstItem="080-ZJ-kBJ" firstAttribute="centerX" secondItem="mn2-FC-Ace" secondAttribute="centerX" id="cyd-jx-SBj"/>
+                            <constraint firstItem="ZBg-Pr-r59" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="e2X-Dh-KYQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="abH-gN-Ue2" secondAttribute="trailing" constant="24" id="gpE-p1-lcT"/>
+                            <constraint firstItem="Wqy-AI-SnW" firstAttribute="centerX" secondItem="080-ZJ-kBJ" secondAttribute="centerX" id="lb4-bL-yaC"/>
+                            <constraint firstItem="080-ZJ-kBJ" firstAttribute="height" secondItem="mn2-FC-Ace" secondAttribute="height" id="mt9-t0-GeE"/>
+                            <constraint firstItem="080-ZJ-kBJ" firstAttribute="width" secondItem="mn2-FC-Ace" secondAttribute="width" id="r2C-1a-5Mr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PlH-TZ-TQk" secondAttribute="trailing" constant="24" id="tWw-MM-wiG"/>
+                            <constraint firstItem="mn2-FC-Ace" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="txK-dG-cRO"/>
+                            <constraint firstItem="abH-gN-Ue2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="xOG-Yr-ljO"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="cancelBtn" destination="Wqy-AI-SnW" id="9PO-dF-4ks"/>
@@ -100,4 +138,7 @@
             <point key="canvasLocation" x="-58.399999999999999" y="137.4384236453202"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="knoxgoldenlogo" width="414.5" height="123.5"/>
+    </resources>
 </document>
