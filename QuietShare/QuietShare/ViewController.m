@@ -27,7 +27,7 @@ static QMFrameReceiver *rx;
     _profilePicker.dataSource = self;
     _profilePicker.showsSelectionIndicator = YES;
     _selectedProfile = nil;
-    _receivText.text = @"did:knox:z6MkpZuXCV3Niv7izQi2N46RBFKD771MeQMXAxw9yd8Pdejv";
+    _txtToSend.text = @"did:knox:z6MkpZuXCV3Niv7izQi2N46RBFKD771MeQMXAxw9yd8Pdejv";//
     //_txtToSend.text = @"Version: 0.1.0 ID: 2bd8c786-4836-4bc1-9df2-ca20d54c3d45 Date Issued: 2022-02-07 21:12:21 Currency: USD Amount: 0.01 Owned By: 5d282cd21e9abe57fae7f62cf07e7be5931073da1b522790e63834fe17a4c2be Authority: 650ace8a112e1f3c050c1a923a0abc6e1a254ba177906f0d26b1f5db205b7a8c Issued By: b4faa8601b468d7402452ecf6977581968c038da38b46fa4c4569fc4abe5970c Block Depth: 2 Secured Signature: 346362052aa2254d47d1b2d1b6a5f1d9f3b1117980edf5e11d6911a9f6c5f5410792d2169fce0f81646f99bac56cfbe8d2be186027b3204057bf1d02ebcc6c09 Authorized Signature: db11696145212481e7bb160a8038e760370a1f35a9f9731df05c30f7f9952ceff2ac514330dfe354ced9f0fa097b80e7766a2bfe19a34e1b629e3ca55f03ae0f";
 }
 
